@@ -1,0 +1,206 @@
+<div class="gologin container my-auto">
+  <ul class ="nav">
+    <li class ="nav-item">
+      <h3><a class="nav-link mb-1" [routerLink]="['/login']">LOGIN</a></h3>
+    </li>
+    <li class ="nav-item">
+      <h3><a class="nav-link mb-1" [routerLink]="['/register']">JOIN</a></h3>
+    </li>
+  </ul>
+</div>
+<!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">WELCOM CAFE는 공사중</h1>
+        <h3 class="mb-5">
+          <em><h4>당신의 카페 주문을 더욱 쉽고 빠르게!</h4></em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">카페찾기</a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+<!-- About CAFE APP&WEB -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>My Cafe </h2>
+            <p class="lead mb-5"> 홈페이지로 간단하게 메뉴와 위치를 확인하고 앱에서 주문하세요! <br>당신의 카페 주문이 더욱 쉽고 간편해 집니다.
+              </p>
+              <h5>My cafe를 사용하고 계시는 사장님이라면?</h5>
+              <br>
+              
+            <a class="btn btn-dark btn-xl js-scroll-trigger" [routerLink]="['/owner']">사장님 페이지  GO GO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- SEARCH CAFE -->
+    <section class="content-section bg-primary text-white text-center" id="services">
+      <div class="container">
+        <form>
+              <div class="form-row col-lg-8 mx-auto">
+              <h2 class="text-secondary mb-0">SEARCH</h2>
+                <div class="col-5 col-md-7 mb-5">
+                  <input type="cafename" class="form-control form-control-lg" placeholder="search your cafe...">
+                </div>
+                <div class="col-10 col-md-2">
+                  <button type="submit" class="btn btn-warning btn-lg btn-warning">검색하기</button>
+                </div>
+              </div>
+        </form>
+        
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <img ng-src="grazie.jpg" height = 100px width = 100px onclick="location.href = '/menugrazie_coffe'">
+            
+            <h4>
+              <strong>연구관 Grazie</strong>
+            </h4>
+            
+          </div>
+          
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <img src="images/grazie.jpg" height = 100px width = 100px onclick="location.href = './menugrazie_coffe'">
+            
+            <h4>
+              <strong>미래관 Grazie</strong>
+            </h4>
+            
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+          <img src="images/ediya.png" height = 100px width = 100px onclick="location.href = './menugrazie_coffe'">
+            <h4>
+              <strong>이디야</strong>
+            </h4>
+            
+          </div>
+          <div class="col-lg-3 col-md-6">
+          
+          <img src="images/star.jpg" height = 100px width = 100px onclick="location.href = './menugrazie_coffe'">
+            <h4>
+              <strong>스타벅스</strong>
+            </h4>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Callout -->
+    <section class="callout">
+      <div class="container text-center">
+        <h2 class="mx-auto mb-5">Welcome to
+          <em>your</em>
+          next website!</h2>
+        <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
+      </div>
+    </section>
+<!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h3 class="text-secondary mb-0">Portfolio</h3>
+          <h2 class="mb-5">Recent Projects</h2>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Stationary</h2>
+                  <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Ice Cream</h2>
+                  <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Strawberries</h2>
+                  <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Workspace</h2>
+                  <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="content-section bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">The buttons below are impossible to resist...</h2>
+        <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
+        <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+      </div>
+    </section>
+
+    
+
+
+    
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="#">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Your Website 2018</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
