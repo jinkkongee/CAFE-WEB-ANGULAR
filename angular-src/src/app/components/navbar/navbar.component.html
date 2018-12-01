@@ -1,29 +1,25 @@
-<!-- Navigation -->
-<a class="menu-toggle rounded" href="#">
-  <i class="fas fa-bars"></i>
-</a>
-<nav id="sidebar-wrapper">
-  <ul class="sidebar-nav">
-    <li class="sidebar-brand">
-      <a class="js-scroll-trigger" href="#page-top">WELCOM CAFE</a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a class="js-scroll-trigger" href="#page-top">Home</a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a class="js-scroll-trigger" href="#about">About</a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a class="js-scroll-trigger" href="#services">CAFE</a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a class="js-scroll-trigger" href="#portfolio">ORDER</a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a class="js-scroll-trigger" href="#contact">Contact</a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a class="js-scroll-trigger" href="./owner">사장님 페이지</a>
-    </li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" [routerLink]="['']">MY CAFE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['login']">LOGIN <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['register']">JOIN<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['searchcafe']">카페 찾기</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/owner']">사장님 페이지</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']">의견 보내기</a>
+      </li>
+    </ul>
+  </div>
 </nav>

@@ -17,12 +17,17 @@ import { AuthService } from './services/auth.service';
 import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
 import { OwnerComponent } from './components/owner/owner.component';
+import { MenugraziecoffeeComponent } from './components/menugraziecoffee/menugraziecoffee.component';
+import { SearchcafeComponent } from './components/searchcafe/searchcafe.component';
+
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'owner',component:OwnerComponent},
+  {path:'searchcafe',component:SearchcafeComponent},
+  {path:'menugraziecoffee',component:MenugraziecoffeeComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]}
 ]
@@ -36,7 +41,10 @@ const appRoutes: Routes = [
     HomeComponent,
     DashboardComponent,
     ProfileComponent,
-    OwnerComponent
+    OwnerComponent,
+    MenugraziecoffeeComponent,
+    SearchcafeComponent,
+    
   ],
   imports: [
     BrowserModule,
