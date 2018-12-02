@@ -111,6 +111,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_owner_owner_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/owner/owner.component */ "./src/app/components/owner/owner.component.ts");
 /* harmony import */ var _components_menugraziecoffee_menugraziecoffee_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/menugraziecoffee/menugraziecoffee.component */ "./src/app/components/menugraziecoffee/menugraziecoffee.component.ts");
 /* harmony import */ var _components_searchcafe_searchcafe_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/searchcafe/searchcafe.component */ "./src/app/components/searchcafe/searchcafe.component.ts");
+/* harmony import */ var _components_order_order_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/order/order.component */ "./src/app/components/order/order.component.ts");
+/* harmony import */ var _components_menugrazielatte_menugrazielatte_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/menugrazielatte/menugrazielatte.component */ "./src/app/components/menugrazielatte/menugrazielatte.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -136,13 +138,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"] },
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"] },
     { path: 'owner', component: _components_owner_owner_component__WEBPACK_IMPORTED_MODULE_16__["OwnerComponent"] },
     { path: 'searchcafe', component: _components_searchcafe_searchcafe_component__WEBPACK_IMPORTED_MODULE_18__["SearchcafeComponent"] },
+    { path: 'order', component: _components_order_order_component__WEBPACK_IMPORTED_MODULE_19__["OrderComponent"] },
     { path: 'menugraziecoffee', component: _components_menugraziecoffee_menugraziecoffee_component__WEBPACK_IMPORTED_MODULE_17__["MenugraziecoffeeComponent"] },
+    { path: 'menugrazielatte', component: _components_menugrazielatte_menugrazielatte_component__WEBPACK_IMPORTED_MODULE_20__["MenugrazielatteComponent"] },
     { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
 ];
@@ -162,6 +168,8 @@ var AppModule = /** @class */ (function () {
                 _components_owner_owner_component__WEBPACK_IMPORTED_MODULE_16__["OwnerComponent"],
                 _components_menugraziecoffee_menugraziecoffee_component__WEBPACK_IMPORTED_MODULE_17__["MenugraziecoffeeComponent"],
                 _components_searchcafe_searchcafe_component__WEBPACK_IMPORTED_MODULE_18__["SearchcafeComponent"],
+                _components_order_order_component__WEBPACK_IMPORTED_MODULE_19__["OrderComponent"],
+                _components_menugrazielatte_menugrazielatte_component__WEBPACK_IMPORTED_MODULE_20__["MenugrazielatteComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -262,7 +270,7 @@ module.exports = "/*!\r\n * Start Bootstrap - Stylish Portfolio v5.0.1 (https://
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- Header -->\n    <section class=\"masthead d-flex\">\n      <div class=\"container text-center my-auto\">\n        <h1 class=\"mb-1\">WELCOM CAFE는 공사중</h1>\n        <h3 class=\"mb-5\">\n          <em><h4>당신의 카페 주문을 더욱 쉽고 빠르게!</h4></em>\n        </h3>\n        <p class = \"lead mb-5\"> 홈페이지로 간단하게 메뉴와 위치를 확인하고 앱에서 주문하세요! <br>당신의 카페 주문이 더욱 쉽고 간편해 집니다.</p>\n        <h5><h5>My cafe를 사용하고 계시는 사장님이라면?</h5><br>\n        <a class =\"btn btn-dark btn-xl js-scroll-trigger\" [routerLink]=\"['/owner']\">사장님 페이지  GO GO</a>\n      </h5>\n    </div>\n  </section>\n\n\n"
+module.exports = "\n<!-- Header -->\n    <section class=\"masthead d-flex\">\n      <div class=\"container text-center my-auto\">\n        <h1 class=\"mb-1\">WELCOM CAFE 공사</h1>\n        <h3 class=\"mb-5\">\n          <em><h4>당신의 카페 주문을 더욱 쉽고 빠르게!</h4></em>\n        </h3>\n        <p class = \"lead mb-5\"> 홈페이지로 간단하게 메뉴와 위치를 확인하고 앱에서 주문하세요! <br>당신의 카페 주문이 더욱 쉽고 간편해 집니다.</p>\n        <h5><h5>My cafe를 사용하고 계시는 사장님이라면?</h5><br>\n        <a class =\"btn btn-dark btn-xl js-scroll-trigger\" [routerLink]=\"['/owner']\">사장님 페이지  GO GO</a>\n      </h5>\n    </div>\n  </section>\n\n\n"
 
 /***/ }),
 
@@ -380,7 +388,7 @@ var LoginComponent = /** @class */ (function () {
                     type: 'success',
                     timeout: 3000
                 });
-                _this.router.navigate(['dashboard']);
+                _this.router.navigate(['']);
             }
             else {
                 _this.flashMessage.showFlashMessage({
@@ -427,7 +435,7 @@ module.exports = "/*!\r\n * Start Bootstrap - Stylish Portfolio v5.0.1 (https://
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class =\"content-section bg-light\" id=\"info\">\n\t<div class =\"info\">\n\t\t<h2 class=\"text-center mb-5\">\n\t\t\t<em><h2>연구관 그라지에(Grazie)</h2></em>\n\t\t</h2>\n\t</div>\n</section>\n\n<!--menutoggle-->\n<section class =\"menubar\">\n\t<ul class=\"nav nav-tabs\">\n  <li class=\"nav-item\">\n    <a class=\"nav-link active\" [routerLink]=\"['menugraziecoffee']\">COFFEE</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">LATTE</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">TEA</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">SMOOTHIE</a>\n  </li>\n</ul>\n</section>\n\n<!--MENU-->\n<section class = \"content-section\" id=\"menu\">\n\t<div class=\"menu\">\n\t\t<div class =\"row\">\n\t\t\t<div class =\"te-center my-auto btn-xl\">\n\t\t\t\t<figure class=\"figure ml-10\">\n\t\t\t\t</figure>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n</section>\n\n\n"
+module.exports = "<section class =\"content-section bg-light\" id=\"info\">\n\t<div class =\"info\">\n\t\t<h2 class=\"text-center mb-5\">\n\t\t\t<em><h2>연구관 그라지에(Grazie)</h2></em>\n\t\t</h2>\n\t</div>\n</section>\n\n<!--menutoggle-->\n<section class =\"menubar\">\n\t<ul class=\"nav nav-tabs\">\n  <li class=\"nav-item\">\n    <a class=\"nav-link active\" [routerLink]=\"['menugraziecoffee']\">COFFEE</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugrazielatte']\">LATTE</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">TEA</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">SMOOTHIE</a>\n  </li>\n</ul>\n</section>\n\n<!--MENU-->\n<section class = \"content-section\" id=\"menu\">\n\t<div class=\"menu\">\n\t\t<div class =\"row\">\n\t\t\t<div class =\"te-center my-auto btn-xl\">\n\t\t\t\t<figure class=\"figure ml-10\">\n\t\t\t\t\t<img src =\"assets/img/americano.jpg\" height = 150px width = 150px>\n\t\t\t\t\t<figcaption class=\"figure-caption\"> AMERICANO(HOT/ICE)</figcaption>\n\t\t\t\t</figure>\n\t\t\t\t&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t\t\t<figure class=\"figure ml-10\">\n\t\t\t\t\t<img src =\"assets/img/hazelnut.png\" height = 180px width = 160px>\n\t\t\t\t\t<figcaption class=\"figure-caption\">HAZELNUT(HOT/ICE)</figcaption>\n\t\t\t\t</figure>\n\t\t\t\t&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t\t\t<figure class=\"figure ml-10\">\n\t\t\t\t\t<img src =\"assets/img/viena.jpg\" height = 150px width = 150px>\n\t\t\t\t\t<figcaption class=\"figure-caption\">VIENNA COFFE(HOT/ICE)</figcaption>\n\t\t\t\t</figure>\n\t\t\t\t&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t\t\t<figure class=\"figure ml-10\">\n\t\t\t\t\t<img src =\"assets/img/viena.jpg\" height = 150px width = 150px>\n\t\t\t\t\t<figcaption class=\"figure-caption\">VIENNA COFFE(HOT/ICE)</figcaption>\n\t\t\t\t</figure>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n</section>\n\n\n\n"
 
 /***/ }),
 
@@ -466,6 +474,69 @@ var MenugraziecoffeeComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], MenugraziecoffeeComponent);
     return MenugraziecoffeeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/menugrazielatte/menugrazielatte.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/menugrazielatte/menugrazielatte.component.css ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/*!\r\n * Start Bootstrap - Stylish Portfolio v5.0.1 (https://startbootstrap.com/template-overviews/stylish-portfolio)\r\n * Copyright 2013-2018 Start Bootstrap\r\n * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)\r\n */\r\n\r\nbody,\r\nhtml {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  font-family: 'Source Sans Pro';\r\n}\r\n\r\n.btn-xl {\r\n  padding: 1.25rem 2.5rem;\r\n}\r\n\r\n.content-section {\r\n  padding-top: 7.5rem;\r\n  padding-bottom: 7.5rem;\r\n}\r\n\r\n.content-section-heading h2 {\r\n  font-size: 3rem;\r\n}\r\n\r\n.content-section-heading h3 {\r\n  font-size: 1rem;\r\n  text-transform: uppercase;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n  font-weight: 700;\r\n}\r\n\r\n.text-faded {\r\n  color: rgba(255, 255, 255, 0.7);\r\n}\r\n\r\n/* Map */\r\n\r\n.map {\r\n  height: 30rem;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n  .map {\r\n    height: 75%;\r\n  }\r\n}\r\n\r\n.map iframe {\r\n  pointer-events: none;\r\n}\r\n\r\n.scroll-to-top {\r\n  position: fixed;\r\n  right: 15px;\r\n  bottom: 15px;\r\n  display: none;\r\n  width: 50px;\r\n  height: 50px;\r\n  text-align: center;\r\n  color: white;\r\n  background: rgba(52, 58, 64, 0.5);\r\n  line-height: 45px;\r\n}\r\n\r\n.scroll-to-top:focus, .scroll-to-top:hover {\r\n  color: white;\r\n}\r\n\r\n.scroll-to-top:hover {\r\n  background: #343a40;\r\n}\r\n\r\n.scroll-to-top i {\r\n  font-weight: 800;\r\n}\r\n\r\n.masthead {\r\n  min-height: 30rem;\r\n  position: relative;\r\n  display: table;\r\n  width: 100%;\r\n  height: auto;\r\n  padding-top: 8rem;\r\n  padding-bottom: 8rem;\r\n  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);\r\n  background-position: center center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n\r\n.masthead h1 {\r\n  font-size: 4rem;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Lato';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');\r\n}\r\n\r\nbody {\r\n  background: #448ed3 ;\r\n  font-family: \"Lato\" ;\r\n}\r\n\r\n.wrap {\r\n  width:250px;\r\n  height: auto;\r\n  margin: auto;\r\n  margin-top: 10%;\r\n}\r\n\r\n.avatar {\r\n  width: 100%;\r\n  margin: auto;\r\n  width: 65px;\r\n  border-radius: 100px;\r\n  height: 65px;\r\n  background: #448ed3 ;\r\n  position: relative;\r\n  bottom: -15px;\r\n}\r\n\r\n.avatar img {\r\n  width: 55px;\r\n  height: 55px;\r\n  border-radius: 100px;\r\n  margin: auto;\r\n  border:3px solid #fff;\r\n  display: block;\r\n}\r\n\r\n.wrap input {\r\n  border: none;\r\n  background: #fff;\r\n  font-family:Lato ;\r\n  font-weight:700 ;\r\n  display: block;\r\n  height: 40px;\r\n  outline: none;\r\n  width: calc(100% - 24px) ;\r\n  margin: auto;\r\n  padding: 6px 12px 6px 12px;\r\n}\r\n\r\n.bar {\r\n  width: 100%;\r\n  height: 1px;\r\n  background: #fff ;\r\n}\r\n\r\n.bar i {\r\n  width: 95%;\r\n  margin: auto;\r\n  height: 1px ;\r\n  display: block;\r\n  background: #d1d1d1;\r\n}\r\n\r\n.wrap input[type=\"text\"] {\r\n  border-radius: 7px 7px 0px 0px ;\r\n}\r\n\r\n.wrap input[type=\"password\"] {\r\n  border-radius: 0px 0px 7px 7px ;\r\n}\r\n\r\n.forgot_link {\r\n  color: #83afdf ;\r\n  color: #83afdf;\r\n  text-decoration: none;\r\n  font-size: 11px;\r\n  position: relative;\r\n  left: 193px;\r\n  top: -36px;\r\n}\r\n\r\n.wrap button {\r\n  width: 100%;\r\n  border-radius: 7px;\r\n  background: #b6ee65;\r\n  -webkit-text-decoration: center;\r\n          text-decoration: center;\r\n  border: none;\r\n  color: #51771a;\r\n  margin-top:-5px;\r\n  padding-top: 14px;\r\n  padding-bottom: 14px;\r\n  outline: none;\r\n  font-size: 13px;  \r\n  border-bottom: 3px solid #307d63;\r\n  cursor: pointer;\r\n}\r\n\r\n@media (min-width: 992px) {\r\n  .masthead {\r\n    height: 100vh;\r\n  }\r\n  .masthead h1 {\r\n    font-size: 5.5rem;\r\n  }\r\n}\r\n\r\n#demo\r\n    {\r\n      background-repeat: no-repeat;\r\n      width: 20px;\r\n      height: 10px;\r\n    }\r\n\r\nul {\r\n    list-style:none;\r\n    margin:0;\r\n    padding:0;\r\n}\r\n\r\nul {\r\n    list-style:none;\r\n    margin:0;\r\n    padding:0;\r\n}\r\n\r\n/* Side Menu */\r\n\r\n#sidebar-wrapper {\r\n  position: fixed;\r\n  z-index: 2;\r\n  right: 0;\r\n  width: 250px;\r\n  height: 100%;\r\n  transition: all 0.4s ease 0s;\r\n  -webkit-transform: translateX(250px);\r\n  transform: translateX(250px);\r\n  background: #1D809F;\r\n  border-left: 1px solid rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.sidebar-nav {\r\n  position: absolute;\r\n  top: 0;\r\n  width: 250px;\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\n.sidebar-nav li.sidebar-nav-item a {\r\n  display: block;\r\n  text-decoration: none;\r\n  color: #fff;\r\n  padding: 15px;\r\n}\r\n\r\n.sidebar-nav li a:hover {\r\n  text-decoration: none;\r\n  color: #fff;\r\n  background: rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n.sidebar-nav li a:active,\r\n.sidebar-nav li a:focus {\r\n  text-decoration: none;\r\n}\r\n\r\n.sidebar-nav > .sidebar-brand {\r\n  font-size: 1.2rem;\r\n  background: rgba(52, 58, 64, 0.1);\r\n  height: 80px;\r\n  line-height: 50px;\r\n  padding-top: 15px;\r\n  padding-bottom: 15px;\r\n  padding-left: 15px;\r\n}\r\n\r\n.sidebar-nav > .sidebar-brand a {\r\n  color: #fff;\r\n}\r\n\r\n.sidebar-nav > .sidebar-brand a:hover {\r\n  color: #fff;\r\n  background: none;\r\n}\r\n\r\n#sidebar-wrapper.active {\r\n  right: 250px;\r\n  width: 250px;\r\n  transition: all 0.4s ease 0s;\r\n}\r\n\r\n.menu-toggle {\r\n  position: fixed;\r\n  right: 15px;\r\n  top: 15px;\r\n  width: 50px;\r\n  height: 50px;\r\n  text-align: center;\r\n  color: #fff;\r\n  background: rgba(52, 58, 64, 0.5);\r\n  line-height: 50px;\r\n  z-index: 999;\r\n}\r\n\r\n.menu-toggle:focus, .menu-toggle:hover {\r\n  color: #fff;\r\n}\r\n\r\n.menu-toggle:hover {\r\n  background: #343a40;\r\n}\r\n\r\n.service-icon {\r\n  background-color: #fff;\r\n  color: #1D809F;\r\n  height: 7rem;\r\n  width: 7rem;\r\n  display: block;\r\n  line-height: 7.5rem;\r\n  font-size: 2.25rem;\r\n  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.callout {\r\n  padding: 15rem 0;\r\n  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);\r\n  background-position: center center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n\r\n.callout h2 {\r\n  font-size: 3.5rem;\r\n  font-weight: 700;\r\n  display: block;\r\n  max-width: 30rem;\r\n}\r\n\r\n.portfolio-item {\r\n  display: block;\r\n  position: relative;\r\n  overflow: hidden;\r\n  max-width: 530px;\r\n  margin: auto auto 1rem;\r\n}\r\n\r\n.portfolio-item .caption {\r\n  display: flex;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: rgba(33, 37, 41, 0.2);\r\n  position: absolute;\r\n  top: 0;\r\n  bottom: 0;\r\n  z-index: 1;\r\n}\r\n\r\n.portfolio-item .caption .caption-content {\r\n  color: #fff;\r\n  margin: auto 2rem 2rem;\r\n}\r\n\r\n.portfolio-item .caption .caption-content h2 {\r\n  font-size: 0.8rem;\r\n  text-transform: uppercase;\r\n}\r\n\r\n.portfolio-item .caption .caption-content p {\r\n  font-weight: 300;\r\n  font-size: 1.2rem;\r\n}\r\n\r\n@media (min-width: 992px) {\r\n  .portfolio-item {\r\n    max-width: none;\r\n    margin: 0;\r\n  }\r\n  .portfolio-item .caption {\r\n    -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;\r\n    -webkit-clip-path: inset(0px);\r\n    clip-path: inset(0px);\r\n  }\r\n  .portfolio-item .caption .caption-content {\r\n    transition: opacity 0.25s;\r\n    margin-left: 5rem;\r\n    margin-right: 5rem;\r\n    margin-bottom: 5rem;\r\n  }\r\n  .portfolio-item img {\r\n    -webkit-transition: -webkit-clip-path 0.25s ease-out;\r\n    -webkit-clip-path: inset(-1px);\r\n    clip-path: inset(-1px);\r\n  }\r\n  .portfolio-item:hover img {\r\n    -webkit-clip-path: inset(2rem);\r\n    clip-path: inset(2rem);\r\n  }\r\n  .portfolio-item:hover .caption {\r\n    background-color: rgba(29, 128, 159, 0.9);\r\n    -webkit-clip-path: inset(2rem);\r\n    clip-path: inset(2rem);\r\n  }\r\n}\r\n\r\nfooter.footer {\r\n  padding-top: 5rem;\r\n  padding-bottom: 5rem;\r\n}\r\n\r\nfooter.footer .social-link {\r\n  display: block;\r\n  height: 4rem;\r\n  width: 4rem;\r\n  line-height: 4.3rem;\r\n  font-size: 1.5rem;\r\n  background-color: #1D809F;\r\n  transition: background-color 0.15s ease-in-out;\r\n  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);\r\n}\r\n\r\nfooter.footer .social-link:hover {\r\n  background-color: #155d74;\r\n  text-decoration: none;\r\n}\r\n\r\na {\r\n  color: #1D809F;\r\n}\r\n\r\na:hover, a:focus, a:active {\r\n  color: #155d74;\r\n}\r\n\r\n.btn-primary {\r\n  background-color: #1D809F !important;\r\n  border-color: #1D809F !important;\r\n  color: #fff !important;\r\n}\r\n\r\n.btn-primary:hover, .btn-primary:focus, .btn-primary:active {\r\n  background-color: #155d74 !important;\r\n  border-color: #155d74 !important;\r\n}\r\n\r\n.btn-secondary {\r\n  background-color: #ecb807 !important;\r\n  border-color: #ecb807 !important;\r\n  color: #fff !important;\r\n}\r\n\r\n.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {\r\n  background-color: #ba9106 !important;\r\n  border-color: #ba9106 !important;\r\n}\r\n\r\n.btn-dark {\r\n  color: #fff !important;\r\n}\r\n\r\n.btn {\r\n  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);\r\n  font-weight: 700;\r\n}\r\n\r\n.bg-primary {\r\n  background-color: #1D809F !important;\r\n}\r\n\r\n.text-primary {\r\n  color: #1D809F !important;\r\n}\r\n\r\n.text-secondary {\r\n  color: #ecb807 !important;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/menugrazielatte/menugrazielatte.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/menugrazielatte/menugrazielatte.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<section class =\"content-section bg-light\" id=\"info\">\n\t<div class =\"info\">\n\t\t<h2 class=\"text-center mb-5\">\n\t\t\t<em><h2>연구관 그라지에(Grazie)</h2></em>\n\t\t</h2>\n\t</div>\n</section>\n\n<!--menutoggle-->\n<section class =\"menubar\">\n\t<ul class=\"nav nav-tabs\">\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">COFFEE</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link  active\" [routerLink]=\"['menugrazilatte']\">LATTE</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">TEA</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" [routerLink]=\"['menugraziecoffee']\">SMOOTHIE</a>\n  </li>\n</ul>\n</section>\n\n<!--MENU-->\n<section class = \"content-section\" id=\"menu\">\n\t<div class=\"menu\">\n\t\t<div class =\"row\">\n\t\t\t<div class =\"te-center my-auto btn-xl\">\n\t\t\t\t\n\t\t\t\t<figure class=\"figure ml-10\">\n\t\t\t\t\t<img src =\"assets/img/latte.jpg\" height = 150px width = 150px>\n\t\t\t\t\t<figcaption class=\"figure-caption\">LATTE(HOT/ICE)</figcaption>\n\t\t\t\t</figure>\n\t\t\t\t&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n</section>\n\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/menugrazielatte/menugrazielatte.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/menugrazielatte/menugrazielatte.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: MenugrazielatteComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenugrazielatteComponent", function() { return MenugrazielatteComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MenugrazielatteComponent = /** @class */ (function () {
+    function MenugrazielatteComponent() {
+    }
+    MenugrazielatteComponent.prototype.ngOnInit = function () {
+    };
+    MenugrazielatteComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-menugrazielatte',
+            template: __webpack_require__(/*! ./menugrazielatte.component.html */ "./src/app/components/menugrazielatte/menugrazielatte.component.html"),
+            styles: [__webpack_require__(/*! ./menugrazielatte.component.css */ "./src/app/components/menugrazielatte/menugrazielatte.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MenugrazielatteComponent);
+    return MenugrazielatteComponent;
 }());
 
 
@@ -557,6 +628,69 @@ var NavbarComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/order/order.component.css":
+/*!******************************************************!*\
+  !*** ./src/app/components/order/order.component.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/*!\r\n * Start Bootstrap - Stylish Portfolio v5.0.1 (https://startbootstrap.com/template-overviews/stylish-portfolio)\r\n * Copyright 2013-2018 Start Bootstrap\r\n * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)\r\n */\r\n\r\nbody,\r\nhtml {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  font-family: 'Source Sans Pro';\r\n}\r\n\r\n.btn-xl {\r\n  padding: 1.25rem 2.5rem;\r\n}\r\n\r\n.content-section {\r\n  padding-top: 7.5rem;\r\n  padding-bottom: 7.5rem;\r\n}\r\n\r\n.content-section-heading h2 {\r\n  font-size: 3rem;\r\n}\r\n\r\n.content-section-heading h3 {\r\n  font-size: 1rem;\r\n  text-transform: uppercase;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n  font-weight: 700;\r\n}\r\n\r\n.text-faded {\r\n  color: rgba(255, 255, 255, 0.7);\r\n}\r\n\r\n/* Map */\r\n\r\n.map {\r\n  height: 30rem;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n  .map {\r\n    height: 75%;\r\n  }\r\n}\r\n\r\n.map iframe {\r\n  pointer-events: none;\r\n}\r\n\r\n.scroll-to-top {\r\n  position: fixed;\r\n  right: 15px;\r\n  bottom: 15px;\r\n  display: none;\r\n  width: 50px;\r\n  height: 50px;\r\n  text-align: center;\r\n  color: white;\r\n  background: rgba(52, 58, 64, 0.5);\r\n  line-height: 45px;\r\n}\r\n\r\n.scroll-to-top:focus, .scroll-to-top:hover {\r\n  color: white;\r\n}\r\n\r\n.scroll-to-top:hover {\r\n  background: #343a40;\r\n}\r\n\r\n.scroll-to-top i {\r\n  font-weight: 800;\r\n}\r\n\r\n.masthead {\r\n  min-height: 30rem;\r\n  position: relative;\r\n  display: table;\r\n  width: 100%;\r\n  height: auto;\r\n  padding-top: 8rem;\r\n  padding-bottom: 8rem;\r\n  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);\r\n  background-position: center center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n\r\n.masthead h1 {\r\n  font-size: 4rem;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Lato';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');\r\n}\r\n\r\nbody {\r\n  background: #448ed3 ;\r\n  font-family: \"Lato\" ;\r\n}\r\n\r\n.wrap {\r\n  width:250px;\r\n  height: auto;\r\n  margin: auto;\r\n  margin-top: 10%;\r\n}\r\n\r\n.avatar {\r\n  width: 100%;\r\n  margin: auto;\r\n  width: 65px;\r\n  border-radius: 100px;\r\n  height: 65px;\r\n  background: #448ed3 ;\r\n  position: relative;\r\n  bottom: -15px;\r\n}\r\n\r\n.avatar img {\r\n  width: 55px;\r\n  height: 55px;\r\n  border-radius: 100px;\r\n  margin: auto;\r\n  border:3px solid #fff;\r\n  display: block;\r\n}\r\n\r\n.wrap input {\r\n  border: none;\r\n  background: #fff;\r\n  font-family:Lato ;\r\n  font-weight:700 ;\r\n  display: block;\r\n  height: 40px;\r\n  outline: none;\r\n  width: calc(100% - 24px) ;\r\n  margin: auto;\r\n  padding: 6px 12px 6px 12px;\r\n}\r\n\r\n.bar {\r\n  width: 100%;\r\n  height: 1px;\r\n  background: #fff ;\r\n}\r\n\r\n.bar i {\r\n  width: 95%;\r\n  margin: auto;\r\n  height: 1px ;\r\n  display: block;\r\n  background: #d1d1d1;\r\n}\r\n\r\n.wrap input[type=\"text\"] {\r\n  border-radius: 7px 7px 0px 0px ;\r\n}\r\n\r\n.wrap input[type=\"password\"] {\r\n  border-radius: 0px 0px 7px 7px ;\r\n}\r\n\r\n.forgot_link {\r\n  color: #83afdf ;\r\n  color: #83afdf;\r\n  text-decoration: none;\r\n  font-size: 11px;\r\n  position: relative;\r\n  left: 193px;\r\n  top: -36px;\r\n}\r\n\r\n.wrap button {\r\n  width: 100%;\r\n  border-radius: 7px;\r\n  background: #b6ee65;\r\n  -webkit-text-decoration: center;\r\n          text-decoration: center;\r\n  border: none;\r\n  color: #51771a;\r\n  margin-top:-5px;\r\n  padding-top: 14px;\r\n  padding-bottom: 14px;\r\n  outline: none;\r\n  font-size: 13px;  \r\n  border-bottom: 3px solid #307d63;\r\n  cursor: pointer;\r\n}\r\n\r\n@media (min-width: 992px) {\r\n  .masthead {\r\n    height: 100vh;\r\n  }\r\n  .masthead h1 {\r\n    font-size: 5.5rem;\r\n  }\r\n}\r\n\r\n#demo\r\n    {\r\n      background-repeat: no-repeat;\r\n      width: 20px;\r\n      height: 10px;\r\n    }\r\n\r\nul {\r\n    list-style:none;\r\n    margin:0;\r\n    padding:0;\r\n}\r\n\r\nul {\r\n    list-style:none;\r\n    margin:0;\r\n    padding:0;\r\n}\r\n\r\n/* Side Menu */\r\n\r\n#sidebar-wrapper {\r\n  position: fixed;\r\n  z-index: 2;\r\n  right: 0;\r\n  width: 250px;\r\n  height: 100%;\r\n  transition: all 0.4s ease 0s;\r\n  -webkit-transform: translateX(250px);\r\n  transform: translateX(250px);\r\n  background: #1D809F;\r\n  border-left: 1px solid rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.sidebar-nav {\r\n  position: absolute;\r\n  top: 0;\r\n  width: 250px;\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\n.sidebar-nav li.sidebar-nav-item a {\r\n  display: block;\r\n  text-decoration: none;\r\n  color: #fff;\r\n  padding: 15px;\r\n}\r\n\r\n.sidebar-nav li a:hover {\r\n  text-decoration: none;\r\n  color: #fff;\r\n  background: rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n.sidebar-nav li a:active,\r\n.sidebar-nav li a:focus {\r\n  text-decoration: none;\r\n}\r\n\r\n.sidebar-nav > .sidebar-brand {\r\n  font-size: 1.2rem;\r\n  background: rgba(52, 58, 64, 0.1);\r\n  height: 80px;\r\n  line-height: 50px;\r\n  padding-top: 15px;\r\n  padding-bottom: 15px;\r\n  padding-left: 15px;\r\n}\r\n\r\n.sidebar-nav > .sidebar-brand a {\r\n  color: #fff;\r\n}\r\n\r\n.sidebar-nav > .sidebar-brand a:hover {\r\n  color: #fff;\r\n  background: none;\r\n}\r\n\r\n#sidebar-wrapper.active {\r\n  right: 250px;\r\n  width: 250px;\r\n  transition: all 0.4s ease 0s;\r\n}\r\n\r\n.menu-toggle {\r\n  position: fixed;\r\n  right: 15px;\r\n  top: 15px;\r\n  width: 50px;\r\n  height: 50px;\r\n  text-align: center;\r\n  color: #fff;\r\n  background: rgba(52, 58, 64, 0.5);\r\n  line-height: 50px;\r\n  z-index: 999;\r\n}\r\n\r\n.menu-toggle:focus, .menu-toggle:hover {\r\n  color: #fff;\r\n}\r\n\r\n.menu-toggle:hover {\r\n  background: #343a40;\r\n}\r\n\r\n.service-icon {\r\n  background-color: #fff;\r\n  color: #1D809F;\r\n  height: 7rem;\r\n  width: 7rem;\r\n  display: block;\r\n  line-height: 7.5rem;\r\n  font-size: 2.25rem;\r\n  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.callout {\r\n  padding: 15rem 0;\r\n  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);\r\n  background-position: center center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n\r\n.callout h2 {\r\n  font-size: 3.5rem;\r\n  font-weight: 700;\r\n  display: block;\r\n  max-width: 30rem;\r\n}\r\n\r\n.portfolio-item {\r\n  display: block;\r\n  position: relative;\r\n  overflow: hidden;\r\n  max-width: 530px;\r\n  margin: auto auto 1rem;\r\n}\r\n\r\n.portfolio-item .caption {\r\n  display: flex;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: rgba(33, 37, 41, 0.2);\r\n  position: absolute;\r\n  top: 0;\r\n  bottom: 0;\r\n  z-index: 1;\r\n}\r\n\r\n.portfolio-item .caption .caption-content {\r\n  color: #fff;\r\n  margin: auto 2rem 2rem;\r\n}\r\n\r\n.portfolio-item .caption .caption-content h2 {\r\n  font-size: 0.8rem;\r\n  text-transform: uppercase;\r\n}\r\n\r\n.portfolio-item .caption .caption-content p {\r\n  font-weight: 300;\r\n  font-size: 1.2rem;\r\n}\r\n\r\n@media (min-width: 992px) {\r\n  .portfolio-item {\r\n    max-width: none;\r\n    margin: 0;\r\n  }\r\n  .portfolio-item .caption {\r\n    -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;\r\n    -webkit-clip-path: inset(0px);\r\n    clip-path: inset(0px);\r\n  }\r\n  .portfolio-item .caption .caption-content {\r\n    transition: opacity 0.25s;\r\n    margin-left: 5rem;\r\n    margin-right: 5rem;\r\n    margin-bottom: 5rem;\r\n  }\r\n  .portfolio-item img {\r\n    -webkit-transition: -webkit-clip-path 0.25s ease-out;\r\n    -webkit-clip-path: inset(-1px);\r\n    clip-path: inset(-1px);\r\n  }\r\n  .portfolio-item:hover img {\r\n    -webkit-clip-path: inset(2rem);\r\n    clip-path: inset(2rem);\r\n  }\r\n  .portfolio-item:hover .caption {\r\n    background-color: rgba(29, 128, 159, 0.9);\r\n    -webkit-clip-path: inset(2rem);\r\n    clip-path: inset(2rem);\r\n  }\r\n}\r\n\r\nfooter.footer {\r\n  padding-top: 5rem;\r\n  padding-bottom: 5rem;\r\n}\r\n\r\nfooter.footer .social-link {\r\n  display: block;\r\n  height: 4rem;\r\n  width: 4rem;\r\n  line-height: 4.3rem;\r\n  font-size: 1.5rem;\r\n  background-color: #1D809F;\r\n  transition: background-color 0.15s ease-in-out;\r\n  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);\r\n}\r\n\r\nfooter.footer .social-link:hover {\r\n  background-color: #155d74;\r\n  text-decoration: none;\r\n}\r\n\r\na {\r\n  color: #1D809F;\r\n}\r\n\r\na:hover, a:focus, a:active {\r\n  color: #155d74;\r\n}\r\n\r\n.btn-primary {\r\n  background-color: #1D809F !important;\r\n  border-color: #1D809F !important;\r\n  color: #fff !important;\r\n}\r\n\r\n.btn-primary:hover, .btn-primary:focus, .btn-primary:active {\r\n  background-color: #155d74 !important;\r\n  border-color: #155d74 !important;\r\n}\r\n\r\n.btn-secondary {\r\n  background-color: #ecb807 !important;\r\n  border-color: #ecb807 !important;\r\n  color: #fff !important;\r\n}\r\n\r\n.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {\r\n  background-color: #ba9106 !important;\r\n  border-color: #ba9106 !important;\r\n}\r\n\r\n.btn-dark {\r\n  color: #fff !important;\r\n}\r\n\r\n.btn {\r\n  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);\r\n  font-weight: 700;\r\n}\r\n\r\n.bg-primary {\r\n  background-color: #1D809F !important;\r\n}\r\n\r\n.text-primary {\r\n  color: #1D809F !important;\r\n}\r\n\r\n.text-secondary {\r\n  color: #ecb807 !important;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/order/order.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/components/order/order.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"content-section bg-light\" id=\"title\">\n\t<div class =\"title\">\n\t\t<div class =\"container my-auto\">\n\t\t\t<h2 class=\"text-center mb-5\">\n\t\t\t\t<em><h1> 연구동 GRAZIE </h1></em>\n\t\t\t</h2>\n\t\t</div>\n\t</div>\n</section>"
+
+/***/ }),
+
+/***/ "./src/app/components/order/order.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/components/order/order.component.ts ***!
+  \*****************************************************/
+/*! exports provided: OrderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderComponent", function() { return OrderComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var OrderComponent = /** @class */ (function () {
+    function OrderComponent() {
+    }
+    OrderComponent.prototype.ngOnInit = function () {
+    };
+    OrderComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-order',
+            template: __webpack_require__(/*! ./order.component.html */ "./src/app/components/order/order.component.html"),
+            styles: [__webpack_require__(/*! ./order.component.css */ "./src/app/components/order/order.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], OrderComponent);
+    return OrderComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/owner/owner.component.css":
 /*!******************************************************!*\
   !*** ./src/app/components/owner/owner.component.css ***!
@@ -590,6 +724,10 @@ module.exports = "<section class=\"content-section bg-light\" id=\"info\">\n\t<d
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OwnerComponent", function() { return OwnerComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -600,10 +738,43 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var OwnerComponent = /** @class */ (function () {
-    function OwnerComponent() {
+    function OwnerComponent(authService, router, flashMessage) {
+        this.authService = authService;
+        this.router = router;
+        this.flashMessage = flashMessage;
     }
     OwnerComponent.prototype.ngOnInit = function () {
+    };
+    OwnerComponent.prototype.onLoginSubmit = function () {
+        var _this = this;
+        // console.log(this.username);
+        var user = {
+            username: this.username,
+            password: this.password
+        };
+        this.authService.authenticateUser(user).subscribe(function (data) {
+            if (data.success) {
+                _this.authService.storeUserData(data.token, data.user);
+                _this.flashMessage.showFlashMessage({
+                    messages: [data.msg],
+                    type: 'success',
+                    timeout: 3000
+                });
+                _this.router.navigate(['order']);
+            }
+            else {
+                _this.flashMessage.showFlashMessage({
+                    messages: [data.msg],
+                    type: 'danger',
+                    timeout: 3000
+                });
+                _this.router.navigate(['login']);
+            }
+        });
     };
     OwnerComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -611,7 +782,9 @@ var OwnerComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./owner.component.html */ "./src/app/components/owner/owner.component.html"),
             styles: [__webpack_require__(/*! ./owner.component.css */ "./src/app/components/owner/owner.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            ng_flash_messages__WEBPACK_IMPORTED_MODULE_2__["NgFlashMessageService"]])
     ], OwnerComponent);
     return OwnerComponent;
 }());
@@ -831,7 +1004,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- SEARCH CAFE -->\n<br>\n<br>\n    <section class=\"content-section text-black text-center\" id=\"services\">\n      <div class=\"container\">\n        <form>\n              <div class=\"form-row col-lg-8 mx-auto\">\n              <h2 class=\"text-secondary mb-0\">SEARCH</h2>\n                <div class=\"col-5 col-md-7 mb-5\">\n                  <input type=\"cafename\" class=\"form-control form-control-lg\" placeholder=\"search your cafe...\">\n                </div>\n                <div class=\"col-10 col-md-2\">\n                  <button type=\"submit\" class=\"btn btn-warning btn-lg btn-warning\">검색하기</button>\n                </div>\n              </div>\n        </form>\n        \n        <div class=\"row\">\n\n          <div class=\"col-lg-3 col-md-6 mb-5 mb-lg-0\">\n          <img [src]=\"angular-src/src/grazie.jpg\">\n            \n            <h4>\n              <a class = cafe [routerLink]=\"['/menugraziecoffee']\"><strong>연구관 Grazie</strong></a>\n            </h4>\n            \n          </div>\n          \n          <div class=\"col-lg-3 col-md-6 mb-5 mb-lg-0\">\n          <img src=\"images/grazie.jpg\" height = 100px width = 100px onclick=\"location.href = './menugrazie_coffe'\">\n            \n            <h4>\n              <strong>미래관 Grazie</strong>\n            </h4>\n            \n          </div>\n          <div class=\"col-lg-3 col-md-6 mb-5 mb-md-0\">\n          <img src=\"images/ediya.png\" height = 100px width = 100px onclick=\"location.href = './menugrazie_coffe'\">\n            <h4>\n              <strong>이디야</strong>\n            </h4>\n            \n          </div>\n          <div class=\"col-lg-3 col-md-6\">\n          \n          <img src=\"images/star.jpg\" height = 100px width = 100px onclick=\"location.href = './menugrazie_coffe'\">\n            <h4>\n              <strong>스타벅스</strong>\n            </h4>\n            \n          </div>\n        </div>\n      </div>\n    </section>"
+module.exports = "<!-- SEARCH CAFE -->\n<br>\n<br>\n    <section class=\"content-section text-black text-center\" id=\"services\">\n      <div class=\"container\">\n        <form>\n              <div class=\"form-row col-lg-8 mx-auto\">\n              <h2 class=\"text-secondary mb-0\">SEARCH</h2>\n                <div class=\"col-5 col-md-7 mb-5\">\n                  <input type=\"cafename\" class=\"form-control form-control-lg\" placeholder=\"search your cafe...\">\n                </div>\n                <div class=\"col-10 col-md-2\">\n                  <button type=\"submit\" class=\"btn btn-warning btn-lg btn-warning\">검색하기</button>\n                </div>\n              </div>\n        </form>\n        \n        <div class=\"row\">\n\n          <div class=\"col-lg-3 col-md-6 mb-5 mb-lg-0\">\n          \n            \n            <h4>\n              <a class = cafe [routerLink]=\"['/menugraziecoffee']\">\n               <img src =\"assets/img/grazie.jpg\" height = 150px width = 150px>\n               <br><br><strong>연구관 Grazie</strong>\n              </a>\n            </h4>\n            \n          </div>\n          \n          <div class=\"col-lg-3 col-md-6 mb-5 mb-lg-0\">\n            <h4>\n              <a class = cafe [routerLink]=\"['/menugraziecoffee']\">\n                <img src =\"assets/img/grazie.jpg\" height = 150px width = 150px>\n                <br><br><strong>미래관 Grazie</strong>\n              </a>\n            </h4>\n          </div>\n\n          <div class=\"col-lg-3 col-md-6 mb-5 mb-lg-0\">\n            <h4>\n              <a class = cafe>\n                <img src =\"assets/img/ediya2.png\" height = 150px width = 150px>\n                <br><br><strong>이디야</strong>\n              </a>\n            </h4>\n          </div>\n\n          <div class=\"col-lg-3 col-md-6 mb-5 mb-lg-0\">\n            <h4>\n              <a class = cafe>\n                <img src =\"assets/img/hollys.png\" height = 150px width = 150px>\n                <br><br><strong>할리스</strong>\n              </a>\n            </h4>\n          </div>\n        </div>\n      </div>\n    </section>"
 
 /***/ }),
 

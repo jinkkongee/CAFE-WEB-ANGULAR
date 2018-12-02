@@ -19,6 +19,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { OwnerComponent } from './components/owner/owner.component';
 import { MenugraziecoffeeComponent } from './components/menugraziecoffee/menugraziecoffee.component';
 import { SearchcafeComponent } from './components/searchcafe/searchcafe.component';
+import { OrderComponent } from './components/order/order.component';
+import { MenugrazielatteComponent } from './components/menugrazielatte/menugrazielatte.component';
 
 
 const appRoutes: Routes = [
@@ -27,7 +29,9 @@ const appRoutes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'owner',component:OwnerComponent},
   {path:'searchcafe',component:SearchcafeComponent},
+  {path:'order',component:OrderComponent},
   {path:'menugraziecoffee',component:MenugraziecoffeeComponent},
+  {path:'menugrazielatte',component:MenugrazielatteComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]}
 ]
@@ -44,6 +48,8 @@ const appRoutes: Routes = [
     OwnerComponent,
     MenugraziecoffeeComponent,
     SearchcafeComponent,
+    OrderComponent,
+    MenugrazielatteComponent,
     
   ],
   imports: [

@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           type: 'success', 
           timeout:3000
         });
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['']);
       } else {
         this.flashMessage.showFlashMessage({
             messages: [data.msg], 
