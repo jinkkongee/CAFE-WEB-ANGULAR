@@ -1,3 +1,12 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+
+
 <section class="content-section bg-light" id="title">
 	<div class ="title">
 		<div class ="container my-auto">
@@ -8,26 +17,124 @@
 	</div>
 </section>
 
-<section class="get">
-	<div class ="order">
-		<form method="get">
-			<div class="form-group">
-				<label>메뉴</label>
-				<input type="text" class="form-control" [(ngModel)]='username' name="username">
-			</div>
-			<div class="form-group">
-				<label>number</label>
-				<input type="password" class="form-control" [(ngModel)]='password' name="password">
-			</div>
-			<div class="form-group">
-				<label>takeout</label>
-				<input type="password" class="form-control" [(ngModel)]='password' name="password">
-			</div>
-			<div class="form-group">
-				<label>timeofarrival</label>
-				<input type="password" class="form-control" [(ngModel)]='password' name="password">
-			</div>
-			
-		</form>
-	</div>
+<section>
+	<div class="container">
+<div class="row">
+	 <br>
+            <div class="col-md-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6">
+               
+                    
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
+                    <!--SHIPPING METHOD-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center"><h4>주문 목록</h4></div>
+                        <div class="panel-body">
+                           <table class="table borderless">
+    						<thead>
+                                <tr>
+        							
+        							<td></td>
+        							<td></td>
+        							<td></td>
+        							<td></td>
+                                </tr>
+    						</thead>
+    						<tbody>
+    							<!-- foreach ($order->lineItems as $line) or some such thing here -->
+    							<tr>
+    								<td class="col-md-3">
+    								    <div class="media">
+    								        
+    								         <div class="media-body">
+    								             <h5 class="media-heading">USER NAME</h5>
+    								            
+    								         </div>
+    								    </div>
+    								</td>
+    								<td class="text-center">MENU</td>
+    								<td class="text-center">NUMBER</td>
+    								<td class="text-right">TIME OF ARRIVAL</td>
+
+
+    								<td class="text-right"> 
+            <div class="searchable-container">
+                <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                	<div data-toggle="buttons" class="btn-group bizmoduleselect">
+                		<label class="btn btn-default">
+                			<div class="bizcontent">
+                				<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                				<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                				<h5>TAKE OUT</h5>
+                			</div>
+                		</label>
+                	</div>
+                	 </div>
+                	</div>
+                </td>
+    								<td class="text-right"><button type="button" class="btn btn-danger">Remove</button></td>
+    							</tr>
+                                <tr>
+    								<td class="col-md-3">
+    								    <div class="media">
+    								        
+    								         <div class="media-body">
+    								             <h5 class="media-heading">USER NAME</h5>
+    								            
+    								         </div>
+    								    </div>
+    								</td>
+    								<td class="text-center">MENU</td>
+    								<td class="text-center">NUMBER</td>
+    								<td class="text-right">TIME OF ARRIVAL</td>
+
+
+    								<td class="text-right"> 
+            <div class="searchable-container">
+                <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                	<div data-toggle="buttons" class="btn-group bizmoduleselect">
+                		<label class="btn btn-default">
+                			<div class="bizcontent">
+                				<input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                				<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                				<h5>TAKE OUT</h5>
+                			</div>
+                		</label>
+                	</div>
+                	 </div>
+                	</div>
+                </td>
+    								<td class="text-right"><button type="button" class="btn btn-danger">Remove</button></td>
+    							</tr>
+    						</tbody>
+    					</table> 
+                        </div>
+                    </div>
+                    <!--SHIPPING METHOD END-->
+                </div>
+                </div>
+                </div>
+</div>
+	
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
