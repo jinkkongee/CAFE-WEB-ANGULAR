@@ -57,9 +57,6 @@ h6 {
   }
 }
 
-.map iframe {
-  pointer-events: none;
-}
 
 .scroll-to-top {
   position: fixed;

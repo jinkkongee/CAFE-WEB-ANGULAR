@@ -21,6 +21,12 @@ import { MenugraziecoffeeComponent } from './components/menugraziecoffee/menugra
 import { SearchcafeComponent } from './components/searchcafe/searchcafe.component';
 import { OrderComponent } from './components/order/order.component';
 import { MenugrazielatteComponent } from './components/menugrazielatte/menugrazielatte.component';
+import { MenugrazieteaComponent } from './menugrazietea/menugrazietea.component';
+import { MenugraziesmoothieComponent } from './menugraziesmoothie/menugraziesmoothie.component';
+import { MenugraziecoffeemiComponent } from './menugraziecoffeemi/menugraziecoffeemi.component';
+import { MenugrazielattemiComponent } from './menugrazielattemi/menugrazielattemi.component';
+import { MenugrazieteamiComponent } from './menugrazieteami/menugrazieteami.component';
+import { MenugraziesmoothiemiComponent } from './menugraziesmoothiemi/menugraziesmoothiemi.component';
 
 
 const appRoutes: Routes = [
@@ -31,7 +37,13 @@ const appRoutes: Routes = [
   {path:'searchcafe',component:SearchcafeComponent},
   {path:'order',component:OrderComponent},
   {path:'menugraziecoffee',component:MenugraziecoffeeComponent},
+  {path:'menugrazietea',component:MenugrazieteaComponent},
+  {path:'menugraziesmoothie',component:MenugraziesmoothieComponent},
   {path:'menugrazielatte',component:MenugrazielatteComponent},
+  {path:'menugraziecoffeemi',component:MenugraziecoffeemiComponent},
+  {path:'menugrazieteami',component:MenugrazieteamiComponent},
+  {path:'menugraziesmoothiemi',component:MenugraziesmoothiemiComponent},
+  {path:'menugrazielattemi',component:MenugrazielattemiComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]}
 ]
@@ -50,6 +62,12 @@ const appRoutes: Routes = [
     SearchcafeComponent,
     OrderComponent,
     MenugrazielatteComponent,
+    MenugrazieteaComponent,
+    MenugraziesmoothieComponent,
+    MenugraziecoffeemiComponent,
+    MenugrazielattemiComponent,
+    MenugrazieteamiComponent,
+    MenugraziesmoothiemiComponent,
     
   ],
   imports: [
