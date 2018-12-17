@@ -29,6 +29,7 @@ import { MenugrazieteamiComponent } from './menugrazieteami/menugrazieteami.comp
 import { MenugraziesmoothiemiComponent } from './menugraziesmoothiemi/menugraziesmoothiemi.component';
 
 
+
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
@@ -68,6 +69,7 @@ const appRoutes: Routes = [
     MenugrazielattemiComponent,
     MenugrazieteamiComponent,
     MenugraziesmoothiemiComponent,
+    
     
   ],
   imports: [

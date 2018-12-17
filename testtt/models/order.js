@@ -3,9 +3,16 @@ const bcrypt = require('bcryptjs');
 const config = require('../config/database');
 
 // User Schema
-const OrderSchema = mongoose.Schema({
+const orderSchema = mongoose.Schema({
+
+  username: {
+    type: String,
+    required: true
+  },
+
   menu: {
-    type: String
+    type: String,
+    required: true
   },
   number: {
     type: String,
@@ -21,4 +28,29 @@ const OrderSchema = mongoose.Schema({
   }
 });
 
-const Order = module.exports = mongoose.model('Order', OrderSchema);
+var Order = mongoose.model("order",orderSchema);
+module.exports = Order;
+
+module.exports.getOrderById = function(id, callback){
+  User.findById(id, callback);
+}
+
+module.exports.getOrderByUsername = function(username, callback){
+  const query = {username: username}
+  User.findOne(query, callback);
+}
+module.exports.addOrder = function(newUser, callback){
+  bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.hash(newOrder.password, salt, (err, hash) => {
+      //if(err) throw err;
+      newOrder.password = hash;
+      newOrder.save(callback);
+    });
+  });
+}
+module.exports.comparePassword = function(candidatePassword, hash, callback){
+  bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
+    //if(err) throw err;
+    callback(null, isMatch);
+  });
+}

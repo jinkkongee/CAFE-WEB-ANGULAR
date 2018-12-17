@@ -3,15 +3,16 @@ const bcrypt = require('bcryptjs');
 const config = require('../config/database');
 
 // User Schema
-const UserSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
   name: {
-    type: String
-  },
-  email: {
     type: String,
     required: true
   },
   username: {
+    type: String,
+    required: true
+  },
+  email: {
     type: String,
     required: true
   },
@@ -21,7 +22,8 @@ const UserSchema = mongoose.Schema({
   }
 });
 
-const User = module.exports = mongoose.model('User', UserSchema);
+var User = mongoose.model("user",userSchema);
+module.exports = User;
 
 module.exports.getUserById = function(id, callback){
   User.findById(id, callback);

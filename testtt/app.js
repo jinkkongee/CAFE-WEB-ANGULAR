@@ -9,7 +9,14 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
-
+const port = 80;
+const app = express();
+app.listen(80, function(){
+  console.log('Express server has started on port 80')
+})
+const connect = () => {
+  return mongoose.connect('mongodb://wj:1q2w3e4r!!@ds117334.mlab.com:17334/dbtest');
+};
 mongoose.Promise = require('bluebird');
 mongoose.connect(config.database, { useNewUrlParser: true });
 mongoose.connection.on('connected', () => {
@@ -20,12 +27,10 @@ mongoose.connection.on('error', (err) => {
 });
 
 //========================================>
-
-var indexRouter = require('./routes/index');
+/*var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
-var app = express();
-
+var ordersRouter = require('./routes/orders');
+var afterordersRouter = require('./routes/afterorders');*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -48,10 +53,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+/*app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use("/orders", ordersRouter);
+app.use("/afterorders", afterordersRouter); */
 
-
+app.use("/", require("./routes/index"));
+app.use("/users", require("./routes/users"));
+app.use("/orders", require("./routes/orders"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
