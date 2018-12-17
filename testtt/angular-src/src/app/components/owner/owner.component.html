@@ -20,5 +20,11 @@
 			<input type="password" class="form-control" [(ngModel)]='password' name="password">
 		</div>
 		<input type="submit" class="btn btn-primary" value="Login">
+
 	</form>
+	<br>
+	<div class="container text-center my-auto">
+		<h5>아직 회원이 아니시라면?</h5><br>
+		<a class ="btn btn-outline-info btn-xl js-scroll-trigger" [routerLink]="['/register']">가입하기</a>
+	</div>
 </section>
